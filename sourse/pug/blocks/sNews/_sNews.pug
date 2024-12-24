@@ -1,0 +1,24 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Статьи
+				
+			+e.row.row
+				mixin item(i)
+					+e.col.col-12.col-lg-6
+						+b.ARTICLE.news-item
+							.row
+								.col
+									+e.caption
+										+e.title.h5
+											a(href="#") Геодезическое оборудование: точность и надежность в каждом измерении
+										p Мы понимаем, что точность и надежность – это ключевые факторы успеха в геодезии. Именно поэтому мы предлагаем вам широкий ассортимент высококачественного оборудования от ведущих мировых производителей.  
+										+e.link(href="#") Читать дальше → 
+								+e.col.col-auto
+									+e.img-wrap(href="#").bg-wrap
+										+img(`img/news-${i}.jpg`).img-bg
+				+item(`1`)
+				+item(`2`)
+	// end sNews

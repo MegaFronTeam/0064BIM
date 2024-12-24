@@ -11,24 +11,56 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-sm-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 			+mnu()
 	//  мобильное меню
+mixin contacts-block()
+	+b.contacts-block
+		+e.item
+			+e.link(href="tel:+74950059750")
+				+icon("phone")
+				| +7 495 005 97 50
+				
+		+e.item
+			+e.link(href="mailto:leica.geosystems@mail.ru")
+				+icon("email")
+				| leica.geosystems@mail.ru
+		+e.item
+			+e.link(href="#")
+				+icon("delivery")
+				| Доставка и оплата
+
+		+e.item
+			+e.link(href="#")
+				+icon("map-mark")
+				| Схема проезда
+
+mixin catalog-block()
+	+b.catalog-block
+		+e.toggle--js.btn.btn-primary
+			span Каталог
+			img(src="img/svg/menu-dots.svg", alt="")
+
 mixin top-nav() 
+	+mob-mnu()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+				.col-xl-auto.col.order-first
+					+e.logo(href="/")
+						img(src="img/logo.png", alt="")
+				.col-auto.d-sm-none
+					+b.toggle-menu-mobile--js
+						span
+				+e.col-contacts.col-sm
+					+contacts-block
+				.col-12.d-xl-none.p-0.m-0
+				.col-sm-auto.order-xl-first
+					+catalog-block()
+				.col.order-xl-first
+					+search
 	// end top-nav

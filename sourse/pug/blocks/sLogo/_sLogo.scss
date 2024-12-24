@@ -1,0 +1,63 @@
+// start .sLogo
+.sLogo {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	&__slider-wrapper {
+		@include media-breakpoint-up(xl) {
+			--sp-x: #{rem(100)};
+			overflow: hidden;
+		}
+		--sp-x: 40px;
+		position: relative;
+		.swiper {
+			overflow: visible;
+			@include media-breakpoint-up(xl) {
+				overflow: hidden;
+				margin-right: calc(var(--sp-x) * -1);
+			}
+		}
+	}
+	.swiper-wrapper {
+		// gap: rem(100);
+
+		align-items: center;
+	}
+	.swiper-slide {
+		width: auto;
+		margin-right: var(--sp-x);
+		@include mt;
+		&:not(:hover) {
+			filter: grayscale(100%);
+		}
+	}
+	img {
+		max-width: rem(180);
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sLogo

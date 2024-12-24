@@ -17,6 +17,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
 }
+.icon-delivery {
+	$h: 13;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(14 / #{$h} *1em );
+}
+.icon-email {
+	$h: 12;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(14 / #{$h} *1em );
+}
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -26,6 +36,26 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-map-mark {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(13 / #{$h} *1em );
+}
+.icon-phone {
+	$h: 13;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(14 / #{$h} *1em );
+}
+.icon-phone-2 {
+	$h: 19;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-search {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;

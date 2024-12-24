@@ -1,0 +1,19 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.sCategories.section#sCategories&attributes(attributes)
+		.container  
+			+e.row.row
+				mixin item(i,t)
+					+e.col.col-6.col-lg-4.col-xl-3
+						+e.item(href="#").bg-wrap
+								img(src=`img/cat-${i}.jpg`, alt=`${t}`).img-bg 
+								.h5.card-title= t 
+				+item(`1`,`Тахеометры`)
+				+item(`2`,`Спутниковые GNSS приёмники`)
+				+item(`3`,`Лазерный 3D сканеры`)
+				+item(`4`,`Системы 3D нивелирования для дорожностроительной техники`)
+				+item(`5`,`Тахеометры`)
+				+item(`6`,`Спутниковые GNSS приёмники`)
+				+item(`7`,`Лазерный 3D сканеры`)
+				+item(`8`,`Системы 3D нивелирования для дорожностроительной техники`) 
+	// end sCategories

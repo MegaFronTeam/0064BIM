@@ -1,11 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
+	+b.headerBlock#headerBlock&attributes(attributes)
+		.container-fluid
+			+e.row.row
+				+e.item.col-lg-6.bg-wrap(href="#")
+					img(src="img/head-1.jpg", alt="").img-bg
+					+e.label.bg-primary Новинка
+					+e.title Тахометр Leica TS07 R500 5”
+					
+				+e.item.col-lg-6.bg-wrap(href="#")
+					img(src="img/head-2.jpg", alt="").img-bg
+					+e.title Тахометр Leica TS07 R500 5”
+					+e.label Хит продаж
+				
 						
 	// end headerBlock

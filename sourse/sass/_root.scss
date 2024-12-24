@@ -4,7 +4,7 @@
 
 	--sPT: #{rem(80 * 0.5)};
 	--sPB: #{rem(90 * 0.5)};
-	--sTPB: #{rem(40 * 0.5)};
+	--sTPB: #{rem(80 * 0.5)};
 
 	--fancybox-content-color: var(--bs-body-color);
 	--swiperArrowSize: #{rem(68)};
@@ -26,10 +26,10 @@
 	//  --carousel-button-svg-stroke-width: 2.5;
 	//  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
 
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(74)};
+		--sPB: #{rem(74)};
+		--sTPB: #{rem(80)};
 	}
 }
 .fancybox__container {
