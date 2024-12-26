@@ -29,31 +29,36 @@
 }
 
 .addBlock {
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	// color: var(--color, #{$primary});
+	// border: 1px solid;
 	display: flex;
 	position: relative;
-	overflow: hidden;
+	--size: #{rem(56)};
 	input {
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: var(--size);
+		width: rem(56);
+		font-size: 1rem;
 	}
 	&__btn {
 		color: inherit;
-		height: rem(45);
+		height: var(--size);
 		position: relative;
 		border-radius: 23px;
-		background: none !important;
-		border: none !important;
+		background: none;
 		box-shadow: none !important;
 		outline: none !important;
 		background: transparent;
-		// padding-left: rem(8);
-		// padding-right: rem(8);
-		width: rem(26);
+		border: 1px solid;
+		border-radius: rem(12px);
+		width: var(--size);
+		@include mt;
+		&:hover {
+			background-color: #000;
+			color: #fff;
+		}
 		&::before,
 		&::after {
 			content: "";

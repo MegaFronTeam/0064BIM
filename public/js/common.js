@@ -68,8 +68,14 @@ function eventHandler() {
 	/* thumb slider */
 	let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
 		slidesPerView: 3,
-		spaceBetween: 26,
-		direction: "vertical",
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				spaceBetween: 26,
+				direction: "vertical",
+				// spaceBetween: 10,
+			},
+		},
 	});
 
 	let prodCardSlider = new Swiper(".sProdCard-slider-js", {

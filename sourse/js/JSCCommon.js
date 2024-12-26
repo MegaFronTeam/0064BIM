@@ -14,7 +14,7 @@ class JSCCommon {
 		elements.forEach(el => el.classList.remove(className));
 	}
 	static modalCall() {
-		const link = '[data-fancybox="modal"], .link-modal-js';
+		const link = "  .link-modal-js";
 		Fancybox.defaults.autoFocus = false;
 		Fancybox.defaults.placeFocusBack = false;
 
@@ -46,6 +46,10 @@ class JSCCommon {
 				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
+		});
+
+		Fancybox.bind("[data-fancybox]", {
+			// Your custom options
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {
