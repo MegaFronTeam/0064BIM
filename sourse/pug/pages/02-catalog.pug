@@ -13,7 +13,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Каталог'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -21,10 +21,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+headerBlock 
-		+sCategories
-		+sCatalog0.bg-gray
-		+sLogo()
-		+sNews()
+		+sCatalog
 		
 	+parts('footer')

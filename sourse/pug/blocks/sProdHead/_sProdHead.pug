@@ -1,0 +1,53 @@
+mixin sProdHead(data)
+	// start sProdHead
+	+b.sProdHead#sProdHead&attributes(attributes)
+		.container
+			.panel-white
+				+b.section-title
+					h1 Тахеометр Leica TS07 R500 (5") AutoHeight
+				+e.row.row
+					+e.col-slider.col-4
+						+e.thumb-wrap
+							.swiper.sProdCard-thumb-js
+								.swiper-wrapper
+									+sProdCardThumb('11')
+									+sProdCardThumb('11')
+						+e.slider-wrap
+							.swiper.sProdCard-slider-js
+								.swiper-wrapper
+									+sProdCardSlide('11')
+									+sProdCardSlide('11')
+									+sProdCardSlide('11')
+									+sProdCardSlide('11')
+									+sProdCardSlide('11')
+					.col
+						.mb-4 Характеристики
+						p #[span.text-gray Угловая точность] — 5"
+						p #[span.text-gray Компенсатор] — двухосевой
+						p #[span.text-gray Рабочие температуры] — от -20 до +50 °C
+						p #[span.text-gray Диапазон компенсации / Точность] — ±4' / 2"
+						p #[span.text-gray Дальность на призму] — до 10 000 м
+						p #[span.text-gray Дальность без отражателя] — до 500 м
+						p #[span.text-gray Точность на призму] — 1 мм + 1.5 ppm
+						.mt-4
+							a(href="#") Все характеристики 
+					.col-auto
+						+e.articular Артикул: 000000
+						+e.price  1 449 000 р.
+						+e.btn.btn.btn-primary(href="#") Купить
+						.row.g-1
+							.col
+								+addblock()
+							.col-auto
+								a.btn.btn-outline-secondary(href="#") Хочу скидку
+	// end sProdHead
+
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.s-img(href=`img/prod-lg.png` data-fancybox='sProdCardSlide')
+			img(loading="lazy" src=`img/prod-lg.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		.slide-item-1
+			img(loading="lazy" src=`img/prod.png` alt="")

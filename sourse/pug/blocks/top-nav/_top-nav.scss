@@ -2,6 +2,8 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	position: relative;
+	z-index: 3;
 	@include media-breakpoint-up(sm) {
 		padding-block: rem(50);
 	}

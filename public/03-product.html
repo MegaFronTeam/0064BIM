@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Товар</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="bg-gray pt-4">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Геодезические приборы</span>
+										<meta itemprop="position" content="3"/></a></li>
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Приборы Leica</span>
+										<meta itemprop="position" content="4"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Тахеометр Leica TS07 R500 (5&quot;) AutoHeight</span>
+										<meta itemprop="position" content="5"/></a></li>
+							</ol>
+						</nav>
+					</div>
+					<!-- start sProdHead-->
+					<div class="sProdHead" id="sProdHead">
+						<div class="container">
+							<div class="panel-white">
+								<div class="section-title">
+									<h1>Тахеометр Leica TS07 R500 (5") AutoHeight</h1>
+								</div>
+								<div class="sProdHead__row row">
+									<div class="sProdHead__col-slider col-4">
+										<div class="sProdHead__thumb-wrap">
+											<div class="swiper sProdCard-thumb-js">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<div class="slide-item-1"><img loading="lazy" src="img/prod.png" alt=""/></div>
+													</div>
+													<div class="swiper-slide">
+														<div class="slide-item-1"><img loading="lazy" src="img/prod.png" alt=""/></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sProdHead__slider-wrap">
+											<div class="swiper sProdCard-slider-js">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<a class="sProdHead__s-img" href="img/prod-lg.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/prod-lg.png" alt=""/>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a class="sProdHead__s-img" href="img/prod-lg.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/prod-lg.png" alt=""/>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a class="sProdHead__s-img" href="img/prod-lg.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/prod-lg.png" alt=""/>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a class="sProdHead__s-img" href="img/prod-lg.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/prod-lg.png" alt=""/>
+														</a>
+													</div>
+													<div class="swiper-slide">
+														<a class="sProdHead__s-img" href="img/prod-lg.png" data-fancybox="sProdCardSlide"><img loading="lazy" src="img/prod-lg.png" alt=""/>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="mb-4">Характеристики</div>
+										<p><span class="text-gray">Угловая точность</span> — 5"</p>
+										<p><span class="text-gray">Компенсатор</span> — двухосевой</p>
+										<p><span class="text-gray">Рабочие температуры</span> — от -20 до +50 °C</p>
+										<p><span class="text-gray">Диапазон компенсации / Точность</span> — ±4' / 2"</p>
+										<p><span class="text-gray">Дальность на призму</span> — до 10 000 м</p>
+										<p><span class="text-gray">Дальность без отражателя</span> — до 500 м</p>
+										<p><span class="text-gray">Точность на призму</span> — 1 мм + 1.5 ppm</p>
+										<div class="mt-4"><a href="#">Все характеристики </a></div>
+									</div>
+									<div class="col-auto">
+										<div class="sProdHead__articular">Артикул: 000000
+										</div>
+										<div class="sProdHead__price"> 1 449 000 р.
+										</div>
+										<a class="sProdHead__btn btn btn-primary" href="#">Купить
+										</a>
+										<div class="row g-1">
+											<div class="col">
+												<div class="addBlock">
+													<button class="addBlock__btn addBlock__btn--minus" type="button">
+													</button>
+													<input type="text" value="1" inputmode="numeric"/>
+													<button class="addBlock__btn addBlock__btn--plus" type="button">
+													</button>
+												</div>
+											</div>
+											<div class="col-auto"><a class="btn btn-outline-secondary" href="#">Хочу скидку</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end sProdHead-->
+					<!-- start sCatalog-->
+					<div class="sCatalog bg-gray section">
+						<div class="container">
+							<div class="section-title mb-3">
+								<h2>Аксессуары к этому товару</h2>
+							</div>
+							<div class="sCatalog__row row">
+								<div class="sCatalog__col col-6 col-xl-3">
+									<article class="product-item product-item--popular">
+										<div>
+											<div class="label bg-primary">Хит продаж</div>
+										</div>
+										<div class="product-item__body">
+											<a class="product-item__img-wrap" href="#">
+												<div class="img-wrap-center"> <img src="img/prod.png" alt="" loading="lazy"/>
+												</div>
+											</a>
+										</div>
+										<div class="title">Тахометр Leica TS07 R500 5”</div>
+										<div class="product-item__footer">
+											<div class="product-item__price product-item__price--old">1 449 000 р.
+											</div>
+											<div class="product-item__price">1 449 000 р. 
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-6 col-xl-3">
+									<article class="product-item product-item--popular">
+										<div>
+											<div class="label bg-primary">Хит продаж</div>
+										</div>
+										<div class="product-item__body">
+											<a class="product-item__img-wrap" href="#">
+												<div class="img-wrap-center"> <img src="img/prod.png" alt="" loading="lazy"/>
+												</div>
+											</a>
+										</div>
+										<div class="title">Тахометр Leica TS07 R500 5”</div>
+										<div class="product-item__footer">
+											<div class="product-item__price product-item__price--old">1 449 000 р.
+											</div>
+											<div class="product-item__price">1 449 000 р. 
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-6 col-xl-3">
+									<article class="product-item product-item--popular">
+										<div>
+											<div class="label bg-primary">Хит продаж</div>
+										</div>
+										<div class="product-item__body">
+											<a class="product-item__img-wrap" href="#">
+												<div class="img-wrap-center"> <img src="img/prod.png" alt="" loading="lazy"/>
+												</div>
+											</a>
+										</div>
+										<div class="title">Тахометр Leica TS07 R500 5”</div>
+										<div class="product-item__footer">
+											<div class="product-item__price product-item__price--old">1 449 000 р.
+											</div>
+											<div class="product-item__price">1 449 000 р. 
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+								<div class="sCatalog__col col-6 col-xl-3">
+									<article class="product-item product-item--popular">
+										<div>
+											<div class="label bg-primary">Хит продаж</div>
+										</div>
+										<div class="product-item__body">
+											<a class="product-item__img-wrap" href="#">
+												<div class="img-wrap-center"> <img src="img/prod.png" alt="" loading="lazy"/>
+												</div>
+											</a>
+										</div>
+										<div class="title">Тахометр Leica TS07 R500 5”</div>
+										<div class="product-item__footer">
+											<div class="product-item__price product-item__price--old">1 449 000 р.
+											</div>
+											<div class="product-item__price">1 449 000 р. 
+											</div>
+										</div>
+									</article>
+									<!-- /.product-item-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end sCatalog-->
+				</div>
+				<!-- start sProdBody-->
+				<div class="sProdBody section" id="sProdBody">
+					<div class="container">
+						<div class="tabs">
+							<div class="tabs__caption">
+								<div class="tabs__btn active">Описание</div>
+								<div class="tabs__btn">Характеристики</div>
+							</div>
+							<div class="tabs__wrap">
+								<div class="tabs__content active">
+									<h2>Комплектация тахеометра Leica TS07:</h2>
+									<ul>
+										<li>Тахеометр</li>
+										<li>Трегер GDF311</li>
+										<li>Аккумулятор GEB334 - 2 шт</li>
+										<li>Портативное ЗУ GKL311 с кабелем для авто-прикуривателя</li>
+										<li>USB флешка</li>
+										<li>Кабель mini-USB GEV223</li>
+										<li>Кейс с ремнями GVP718</li>
+									</ul>
+									<p class="text-gray">* Комплектация может отличаться, полную комплектацию уточняйте у менеджера.</p>
+									<p>Тахеометр Leica TS07 выполняет геодезические измерения с угловой точностью 5". Дальность работы без отражателя до 500 метров позволяет использовать тахеометр для съемки труднодоступных точек. Прибор имеет электронный компенсатор и поддерживает протокол беспроводного обмена Bluetooth для передачи результатов измерений на полевые контроллеры и другие устройства.</p>
+									<p>Максимальная дальность работы измерительного прибора без отражателя составляет 500 метров. Точность определения линейных расстояний составляет +/- 2 мм. С использованием отражателя рабочий диапазон увеличивается до 3,5 км в обычном режиме или до 10 км при работе в режиме больших расстояний. Благодаря этому, вы можете выполнить съемку больших площадей без выноса опорных точек.</p>
+									<p>Подсветка сетки нитей обеспечивает комфортное наведение зрительной трубы тахеометра Leica TS07 на отражатель при любом уровне освещения. 5-ступенчатая регулировка уровня яркости позволит подобрать интенсивность подсветки в зависимости от конкретных условий.</p>
+									<p>Тахеометр оснащен электронным компенсатором, который облегчает процесс позиционирования прибора перед началом измерений. Устройство самостоятельно компенсирует отклонение в пределах 4° с точностью 1,5’’, что обеспечивает минимальную погрешность при выполнении измерений.</p>
+									<p>Встроенная операционная система Windows CE проста в освоении и обеспечивает комфортную работу с приложениями в привычной среде. Предустановленное ПО Leica FlexField позволяет вести полное сопровождение съемочного процесса тахеометром Leica TS07.</p>
+									<p>Память объемом 2 Гб позволяет хранить проекты с большим количеством точек и другой информации. Вы можете увеличить объем доступной памяти, установив SD-карту объемом до 8 Гб в специальный слот на корпусе.</p>
+									<p>Корпус устройства выполнен согласно стандарту IP66. Это обеспечивает полную работоспособность прибора даже после его попадания в воду и контакта с пылью или песком.</p>
+								</div>
+								<div class="tabs__content">
+									<table class="table">
+										<thead>
+											<tr>
+												<th scope="col">Характеристика</th>
+												<th scope="col">Значение</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">Угловая точность</th>
+												<td>5"</td>
+											</tr>
+											<tr>
+												<th scope="row">Компенсатор</th>
+												<td>Двухосевой</td>
+											</tr>
+											<tr>
+												<th scope="row">Рабочие температуры</th>
+												<td>от -20 до +50 °C</td>
+											</tr>
+											<tr>
+												<th scope="row">Диапазон компенсации / Точность</th>
+												<td>±4' / 2"</td>
+											</tr>
+											<tr>
+												<th scope="row">Дальность на призму</th>
+												<td>до 10 000 м</td>
+											</tr>
+											<tr>
+												<th scope="row">Дальность без отражателя</th>
+												<td>до 500 м</td>
+											</tr>
+											<tr>
+												<th scope="row">Точность на призму</th>
+												<td>1 мм + 1.5 ppm</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sProdBody-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Имя" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">submit
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="libs/select2/js/i18n/ru.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

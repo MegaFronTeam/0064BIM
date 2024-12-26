@@ -2,8 +2,53 @@ mixin footer()
 	+b.FOOTER.footer.section
 		.container
 			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+				.col-sm
+					+e.title.h5 Контактные данные
+					+b.contacts-block.d-block
+						+e.item
+							+e.link(href="tel:+74950059750")
+								+icon("phone")
+								| +7 495 005 97 50
+								
+						+e.item
+							+e.link(href="mailto:leica.geosystems@mail.ru")
+								+icon("email")
+								| leica.geosystems@mail.ru
+						+e.item
+							+e.link
+								+icon("map-mark")
+								div Москва, ул. Гостиничная, дом 9А, оф. 236 Пн-Пт с 9:30 до 18:00
+									br
+									a(href="#").tdu Схема проезда 
+				.col-sm
+					+e.title.h5 Соцсети
+
+					+b.social-block
+						+e.item
+							+e.link(href="#")
+								img(src="img/svg/telegram.svg", alt="")
+								+e.title.d-none.d-sm-block.strong @frontteam
+						+e.item
+							+e.link(href="#")
+								img(src="img/svg/whatsapp.svg", alt="")
+								+e.title.d-none.d-sm-block WhatsApp
+						+e.item
+							+e.link(href="#")
+								img(src="img/svg/vk.svg", alt="")
+								+e.title.d-none.d-sm-block VK
+				.col-sm
+					+e.title.h5 Каталог
+					ul
+						li: a(href="#") Тахеометры
+						li: a(href="#") Спутниковые GNSS приёмники
+						li: a(href="#") Лазерный 3D сканеры
+						li: a(href="#") Системы 3D нивелирования для дорожностроительной техники 
+				.col-sm
+					+e.title.d-none.d-lg-block 
+					+form-wrap
+						+input("Ваш номер телефона",'tel')
+						button.btn.btn-primary(type="submit") 
+							+icon("phone-2")
+							| Заказать звонок
+			+e.copy ООО «БИМ Приборы»
+			

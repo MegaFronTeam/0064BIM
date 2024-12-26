@@ -1,41 +1,117 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+mixin product-item()
+	+b.ARTICLE.product-item 
+		+e.body
+			+e.title Тахометр Leica TS07 R500 5”
+			+e.img-wrap(href="#")
+				.img-wrap-center 
+					+img(`img/prod.png`)
+		+e.footer
+			+e.price 1 449 000 р.
+			+e.btn(href='#').btn.btn-primary Купить
+	// /.product-item
+mixin product-item2()
+	+b.ARTICLE.product-item--popular
+		div: .label.bg-primary Хит продаж
+		+e.body
+			+e.img-wrap(href="#")
+				.img-wrap-center 
+					+img(`img/prod.png`)
+		.title Тахометр Leica TS07 R500 5”
+		+e.footer
+			+e.price--old 1 449 000 р.
+			+e.price 1 449 000 р. 
 	// /.product-item
 
 mixin sCatalog(h2)
 	// start sCatalog
-	+b.sCatalog.section&attributes(attributes)
+	+b.sCatalog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
 			+e.row.row
-				//- - const wrapClass="col-3"
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`1`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`2`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`3`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`4`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`5`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`6`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`7`,``,``,``) 
-				//- +e.col(class= wrapClass)
-				//- 	+product-item(`8`,``,``,``) 
+				.col-md-3
+					+b.aside-menu
+						
+						+e.head
+							+breadcrumb("Главная",'Каталог')
+						+e.body
+							+e.title.strong Категория
+							nav.menu
+								ul
+									li: a(href="#").current  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#")  Тахеометры
+									li: a(href="#").text-primary  Посмотреть все
+				.col
+					+e.row.row
+
+
+						- const wrapClass="col-12 col-xl-4 col-md-6"
+						- for (var x = 0; x < 9; x++)
+							+e.col(class= wrapClass)
+								+product-item()
+					+pugin
+					+b.sCatalog.bg-gray.section
+						.section-title
+							.row
+								.col
+									h2 Популярные товары
+								.col-auto
+									+b.btns-categories
+										+e.btn(href="#").btn.active Акции 
+										+e.btn(href="#").btn Хиты продаж
+										+e.btn(href="#").btn Госреестр
+
+						+e.row.row
+							- const wrapClass="col-6 col-lg-4"
+							- for (var x = 0; x < 3; x++)
+								+e.col(class= wrapClass)
+									+product-item2() 
 
 	// end sCatalog
+
+
+	
+mixin sCatalog0(h2)
+	// start sCatalog
+	+b.sCatalog.bg-gray.section
+		.container
+			.section-title
+				.row
+					.col
+						h2 Популярные товары
+					.col-auto
+						+b.btns-categories
+							+e.btn(href="#").btn.active Акции 
+							+e.btn(href="#").btn Хиты продаж
+							+e.btn(href="#").btn Госреестр
+
+			+e.row.row
+				- const wrapClass="col-6  col-xl-3"
+				- for (var x = 0; x < 4; x++)
+					+e.col(class= wrapClass)
+						+product-item2() 
+
+	// end sCatalog
+
+
+mixin sCatalog3(h2)
+	// start sCatalog
+	+b.sCatalog.bg-gray.section
+		.container
+			.section-title.mb-4
+				h2 Аксессуары к этому товару
+
+			+e.row.row
+				- const wrapClass="col-6  col-xl-3"
+				- for (var x = 0; x < 4; x++)
+					+e.col(class= wrapClass)
+						+product-item2() 
+
+	// end sCatalog
+
+

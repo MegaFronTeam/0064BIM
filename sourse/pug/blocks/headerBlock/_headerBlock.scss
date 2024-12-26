@@ -63,14 +63,7 @@
 	}
 
 	&__label {
-		background-color: #fff;
-		color: $primary;
-		padding: rem(15px) rem(18px);
-		display: inline-block;
-		border-radius: rem(7.42px);
-		&.bg-primary {
-			color: #fff;
-		}
+		@extend .label;
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -132,4 +125,17 @@
 
 .container-fluid {
 	max-width: calc(1430px);
+}
+
+.label {
+	background-color: #fff;
+	color: $primary;
+	padding: rem(15px) rem(18px);
+	display: inline-block;
+	border-radius: rem(7.42px);
+	text-align: center;
+	display: inline-block;
+	&.bg-primary {
+		color: #fff;
+	}
 }

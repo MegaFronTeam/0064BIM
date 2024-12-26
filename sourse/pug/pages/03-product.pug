@@ -7,13 +7,15 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sLogo/_sLogo.pug
 include ../blocks/sNews/_sNews.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sProdHead/_sProdHead.pug
+include ../blocks/sProdBody/_sProdBody.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
+	- let  title= 'Товар'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -21,10 +23,11 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+headerBlock 
-		+sCategories
-		+sCatalog0.bg-gray
-		+sLogo()
-		+sNews()
+		.bg-gray.pt-4
+			.container
+				+breadcrumb("Главная",'Каталог','Геодезические приборы','Приборы Leica','Тахеометр Leica TS07 R500 (5") AutoHeight')
+			+sProdHead
+			+sCatalog3
+		+sProdBody
 		
 	+parts('footer')
