@@ -86,6 +86,28 @@ function eventHandler() {
 		loop: true,
 		centeredSlides: "true",
 	}); //
+
+	// $(document).on(
+	// 	"mouseenter",
+	// 	".aside-li",
+	// 	function () {
+	// 		$(this).addClass("active");
+	// 	},
+	// 	{passive: true}
+	// );
+	// $(document).on(
+	// 	"mouseleave",
+	// 	".aside-li",
+	// 	function () {
+	// 		$(this).removeClass("active");
+	// 	},
+	// 	{passive: true}
+	// );
+
+	$("body").on("click", ".catalog-block__toggle--js", function () {
+		$(this).toggleClass("active");
+		$(".catalog-block__dropdown").fadeToggle();
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

@@ -27,14 +27,14 @@
 
 .toggle-menu-mobile {
 	& {
-		--h: #{em(2)};
-		--color: #{$primary};
-		--position: calc(var(--h) * 2);
+		--h: 2px;
+		--color: #{#000};
+		--position: calc(var(--h) * 4);
 
 		display: block;
 		height: calc(var(--h) * 12);
 		position: relative;
-		font-size: 32px;
+		font-size: 26px;
 		width: 1em;
 		cursor: pointer;
 	}
@@ -77,6 +77,10 @@
 	&.on {
 		--position: 0;
 		--rotate: 45deg;
+		span:after,
+		span:before {
+			--color: #{#000};
+		}
 	}
 }
 @include media-breakpoint-down(lg) {

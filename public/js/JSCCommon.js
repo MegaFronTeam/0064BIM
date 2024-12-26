@@ -80,14 +80,14 @@ class JSCCommon {
 
 	static toggleMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-		const menu = document.querySelector(".menu-mobile--js");
+		const menu = document.querySelector(".top-nav");
 		this.toggleClass(toggle, "on");
 		menu.classList.toggle("active");
-		this.toggleClass([document.body, document.querySelector("html")], "fixed");
+		// this.toggleClass([document.body, document.querySelector("html")], "fixed");
 	}
 	static closeMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-		const menu = document.querySelector(".menu-mobile--js");
+		const menu = document.querySelector(".top-nav");
 		this.removeClass(toggle, "on");
 		if (menu) {
 			menu.classList.remove("active");
@@ -105,7 +105,7 @@ class JSCCommon {
 				let container = event.target.closest(".menu-mobile--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
 				if (toggle) this.toggleMenu();
-				if (!container && !toggle) this.closeMenu();
+				// if (!container && !toggle) this.closeMenu();
 			},
 			{passive: true}
 		);

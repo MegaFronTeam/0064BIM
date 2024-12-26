@@ -15,7 +15,8 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+mnu()
+			+contacts-block()
+			//- +mnu()
 	//  мобильное меню
 mixin contacts-block()
 	+b.contacts-block
@@ -42,15 +43,42 @@ mixin catalog-block()
 	+b.catalog-block
 		+e.toggle--js.btn.btn-primary
 			span Каталог
-			img(src="img/svg/menu-dots.svg", alt="")
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect y="0.422226" width="9.95556" height="9.95556" rx="3.73333" fill="white"/>
+				<rect x="-9.15527e-05" y="12.8667" width="9.95556" height="9.95556" rx="3.73333" fill="white"/>
+				<rect x="12.4443" y="0.422222" width="9.95556" height="9.95556" rx="3.73333" fill="white"/>
+				<rect x="12.4443" y="12.8667" width="9.95556" height="9.95556" rx="3.73333" fill="white"/>
+				</svg>
+
+		+e.dropdown
+			.container 
+				+b.aside-menu
+					+e.body
+						ul
+							- for (var z = 0; z < 12; z++) 
+								li.aside-li
+									+e.toggle-category() Тахеометры
+										= z
+									+b.category-sub
+										+e.title Тахеометры
+											= z
+											span 30 000 товаров
+										+e.list
+											- for (var y = 0; y < 12; y++) 
+												ul
+													- for (var x = 0; x < 12; x++) 
+														li: a(href="#") Категория вторая
+													li
+														a(href="#").text-primary Еще ↓
+										 
 
 mixin top-nav() 
-	+mob-mnu()
+	//- +mob-mnu()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-xl-auto.col.order-first
+				.hide-block.col-xl-auto.col.order-first
 					+e.logo(href="/")
 						img(src="img/logo.png", alt="")
 				.col-auto.d-sm-none
@@ -58,7 +86,7 @@ mixin top-nav()
 						span
 				+e.col-contacts.col-sm
 					+contacts-block
-				.col-12.d-xl-none.p-0.m-0
+				.col-12.d-xl-none.p-0.m-0.hide-block
 				.col-sm-auto.order-xl-first
 					+catalog-block()
 				.col.order-xl-first
